@@ -25,7 +25,7 @@ if (production)
 module.exports = {
   plugins,
   entry: `${__dirname}/src/main.js`,
-  devServer: { 
+  devServer: {
     historyApiFallback: true,
   },
   devtool: production ? undefined : 'cheap-module-eval-source-map',
@@ -50,7 +50,7 @@ module.exports = {
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true, 
+                sourceMap: true,
                 includePaths: [`${__dirname}/src/style`],
               }
             }
@@ -63,7 +63,6 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|ttf|eot).*/,
-        exclude: /\.icon.svg/,
         use: [
           {
             loader: 'url-loader',
@@ -76,7 +75,6 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|gif|png|tiff|svg)$/,
-        exclude: /\.icon.svg$/,
         use: [
           {
             loader: 'url-loader',
@@ -100,8 +98,3 @@ module.exports = {
     ],
   },
 }
-
-
-
-
-
