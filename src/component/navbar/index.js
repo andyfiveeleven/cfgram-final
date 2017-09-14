@@ -2,8 +2,6 @@ import './_navbar.scss'
 import React from 'react'
 import {connect} from 'react-redux'
 import {Redirect, Link} from 'react-router-dom'
-
-import Icon from '../icon'
 import Avatar from '../avatar'
 import {tokenSet} from '../../action/auth-actions.js'
 import * as util from '../../lib/util.js'
@@ -58,7 +56,6 @@ class Navbar extends React.Component {
     return (
       <header className='navbar'>
         <main>
-        <Icon className='logo' name='kiwi' />
         <h1>cfgram</h1>
 
         {util.renderIf(this.props.loggedIn,
